@@ -29,7 +29,7 @@ export const InputContainer = styled.div`
       }
     `}
 
-  input {
+  select {
     background: transparent;
     align-items: center;
     flex: 1;
