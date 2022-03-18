@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px 0;
+  padding: 16px 0;
 `;
 
 export const InputContainer = styled.form`
@@ -34,9 +34,10 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+`;
 
-  /* div {
-    margin-top: 32px;
-    margin-right: 16px;
-  } */
+export const NavContainer = styled.div`
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
 `;

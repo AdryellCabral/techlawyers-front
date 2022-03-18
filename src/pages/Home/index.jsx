@@ -15,7 +15,7 @@ const Home = () => {
         <h1>
           Tech<span>.</span>lawyers
         </h1>
-        <span>O maior data center de advogados do Brasil</span>
+        <span>O maior catálogo de advogados no mundo.</span>
         <div>
           <Button onClick={() => handleNavigation("/signup")} whiteSchema>
             Cadastre-se

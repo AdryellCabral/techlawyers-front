@@ -1,4 +1,9 @@
-import { Container, CardsContainer, InputContainer } from "./styles";
+import {
+  Container,
+  CardsContainer,
+  InputContainer,
+  NavContainer,
+} from "./styles";
 import { useForm } from "react-hook-form";
 import { FiSearch } from "react-icons/fi";
 import Select from "../../components/Select";
@@ -8,11 +13,14 @@ import { useState } from "react";
 import api from "../../services/api";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
 
 const Dashboard = () => {
   const [list, setList] = useState([]);
 
   const { register, handleSubmit } = useForm();
+
+  const history = useHistory();
 
   const loadAll = () => {
     api
@@ -55,6 +63,10 @@ const Dashboard = () => {
     });
   };
 
+  const noWayHome = () => {
+    history.push("/");
+  };
+
   return (
     <Container>
       <InputContainer onSubmit={handleSubmit(onSubmitFunction)}>
@@ -89,6 +101,12 @@ const Dashboard = () => {
           />
         ))}
       </CardsContainer>
+      <NavContainer>
+        <Button type="submit" onClick={() => noWayHome()}>
+          Home
+        </Button>
+        <Button whiteSchema>Cadastrar advogado</Button>
+      </NavContainer>
     </Container>
   );
 };
