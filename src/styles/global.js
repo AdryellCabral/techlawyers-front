@@ -10,9 +10,11 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
         --white: #F5F5F5;
-        --vanilla: #E5E5E5;
+        --vanilla: #F1EDE0;
         --black: #0C0D0D;
         --orange: #C85311;
+        --gray: #666360;
+        --red: #c53030;
     }
 
     body {
