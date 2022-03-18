@@ -48,6 +48,7 @@ const Signup = () => {
       })
       .catch((err) => {
         toast.error("Erro ao efetuar cadastro, tente outro email.");
+        console.log(err.message);
       });
   };
 
